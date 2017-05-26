@@ -1,0 +1,27 @@
+
+.navbar-custom{
+    background-color: #74AFAD;
+}
+.navbar-custom a {
+    color: white;
+
+}
+
+.navbar-custom a:hover {
+    color: #C63D0F;
+
+}
+
+.head {
+    color: #C63D0F;
+    font-size: 8em;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    margin-top: 1em;
+}
+
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 22px;
+    border-radius: 8px;
+    margin-top: 2em;
+}
