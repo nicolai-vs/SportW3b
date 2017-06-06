@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="felles.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="registration.css.css">
 </head>
 <body>
 <nav class="navbar navbar-custom ">
@@ -21,8 +21,6 @@
     </div>
 </nav>
 <div class=" front" align="center">
-    <h1 class="head">Stop Wishing</h1>
-    <button class="btn btn-success btn-xl" onclick="location.href='registration.php'">  Get Started! </button>
 
     <!-- http://www.w3schools.com/howto/howto_css_login_form.asp for nice login page -->
     <div id="1" class="modal">
