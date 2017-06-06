@@ -12,7 +12,7 @@
 <nav class="navbar navbar-custom ">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">TakeTheStep</a>
+            <a class="navbar-brand" href="home.php">TakeTheStep</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="registration.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -20,6 +20,24 @@
         </ul>
     </div>
 </nav>
+
+<?php
+
+require("reg.inc.php");
+
+$db_server = "localhost";
+$db_username = "root";
+$db_password = "root";
+$db_database = "sportweb";
+
+function save_to_mysql($username, $password, $email, $age, $gender, $level){
+    global $db_server, $db_username, $db_password, $db_database;
+
+    //TODO create connection
+}
+
+?>
+
 <div class=" front" align="center">
 
     <!-- http://www.w3schools.com/howto/howto_css_login_form.asp for nice login page -->
