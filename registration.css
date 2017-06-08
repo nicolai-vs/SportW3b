@@ -77,4 +77,13 @@ span.psw {
     }
 }
 
+/* registration from webporg */
 
+
+.error {
+    background-color: #ffcccc;
+    color: red;
+}
+.small {
+    font-size: 0.8em;
+}
