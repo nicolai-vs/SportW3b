@@ -72,7 +72,7 @@ $terms    = get_value_post("terms");
 
 //Check if the form has been submitted -- any of the input values is set
 $submitted = isset($_POST['username']);
-echo "running";
+echo var_dump( $_REQUEST ); //no post requests are getting through.. See reg.inc.php     
 if($submitted){
     // check for errors
     $errors = input_check($username, $password, $email, $age, $gender, $level, $terms);

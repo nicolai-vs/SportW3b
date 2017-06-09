@@ -15,7 +15,7 @@ function display_form($username = "", $password = "" , $email = "", $age = "", $
     }
 
     //displaying where the user will put info
-    echo '<form name="reg" action"' . $_SERVER['PHP_SELF'] . '"method="POST">';
+    echo '<form name="reg" action="registration.php" method="POST">'; //when this one is correct, nothing shows up in the url..
 
     $error_username = array_key_exists("username", $errors) ? 'class="error"' : '';
     echo '<div' . $error_username . '><label> Username <input type="text" name="username" value="' . $username . '" size="20"/></label></div>';
