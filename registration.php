@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="felles.css">
     <link rel="stylesheet" href="registration.css">
+
 </head>
 <body>
 <nav class="navbar navbar-custom ">
@@ -71,20 +72,16 @@ $level    = get_value_post("level");
 $terms    = get_value_post("terms");
 
 //Check if the form has been submitted -- any of the input values is set
-$submitted = isset($_POST['username']);
-echo var_dump( $_REQUEST ); //no post requests are getting through.. See reg.inc.php
+$submitted = isset($_GET['username']); //TODO when POST is okay change to POST
 if($submitted){
     // check for errors
     $errors = input_check($username, $password, $email, $age, $gender, $level, $terms);
-    echo "inside submittet";
 
     if(count($errors) > 0){
-        echo "inside error";
         display_form($username, $password, $email, $age, $gender, $level, $terms, $errors);
     }else {
-        echo "inside confirm";
         confirm($username, $email, $age,$gender, $level);
-        save_to_mysql($username, $password, $email, $age, $gender, $level);
+        //save_to_mysql($username, $password, $email, $age, $gender, $level);  // this function is working
     }
 }else{
     // display form for the first time
