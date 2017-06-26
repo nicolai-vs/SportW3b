@@ -1,7 +1,7 @@
 <?php
 
 function get_value_post($var) {
-    return isset($_POST[$var]) ? $_POST[$var] : "";
+    return isset($_GET[$var]) ? $_GET[$var] : ""; //todo change to post when post is working
 }
 
 function display_form($username = "", $password = "" , $email = "", $age = "", $gender = "", $level = "", $terms = "", $errors = array()){
@@ -15,7 +15,7 @@ function display_form($username = "", $password = "" , $email = "", $age = "", $
     }
 
     //displaying where the user will put info
-    echo '<form name="reg" action="registration.php" method="POST">'; //when this one is correct, nothing shows up in the url..
+    echo '<form name="reg" action="' . $_SERVER['PHP_SELF'] . '" method="GET">'; //todo make it work with post
 
     $error_username = array_key_exists("username", $errors) ? 'class="error"' : '';
     echo '<div' . $error_username . '><label> Username <input type="text" name="username" value="' . $username . '" size="20"/></label></div>';
@@ -97,7 +97,7 @@ function input_check($username , $password , $email , $age , $gender , $level , 
     if (strlen($password) == 0) {
         $errors['password'] = "Password is missing";
     }
-    elseif(strlen($username) < 6){
+    elseif(strlen($password) < 6){
         $errors['password'] = "Password must be atleast 6 characters long";
     }
     //TODO check if numbers are included and upper and lowercase is used
